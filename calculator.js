@@ -1,12 +1,4 @@
-<html>
-<body>
 
-<p> 
-The global function (calculator) returns price:
-</p>
-
-<p id="calculator"></p>
-<script>
 // Global variables for function to define fixed markup rates
 
 var markup = [];
@@ -54,6 +46,3 @@ function calculator(price, workers, industry) {    // Calculator function
 function isNumeric(n) {
 	return !isNaN(parseFloat(n)) && isFinite(n);
     }
-
-document.getElementById("calculator").innerHTML = calculator(1299.99,3,"food");  // line to run the calculator function with the inputs
-</script>
