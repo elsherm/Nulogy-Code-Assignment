@@ -62,3 +62,10 @@ The calculations are as follows:
   
  total_markup = markup_price + markup_price*workers*markup["worker"]; 
   // Total markup with the industry markup included
+
+3) The third section is to request that the inputs be checked as 1 or more could be wrong
+ return "please check your inputs again";
+ 
+ An isNumerica functions is also used to check if the first 2 inputs are numeric. Code used from:
+ https://api.jquery.com/jQuery.isNumeric/ 
+ https://stackoverflow.com/questions/9716468/is-there-any-function-like-isnumeric-in-javascript-to-validate-numbers
