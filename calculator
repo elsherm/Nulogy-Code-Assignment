@@ -29,7 +29,7 @@ function calculator(price, workers, industry) {    // Calculator function
   
   markup_price = price + price*markup["flat"];  // Flat Markup Calculation
   
-  worker_markup_price = markup_price + price*workers*markup["worker"]; 
+  worker_markup_price = markup_price + markup_price*workers*markup["worker"]; 
   // Calculation with workers markup
   
   total_markup=worker_markup_price + worker_markup_price*markup[industry];
