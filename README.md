@@ -33,3 +33,32 @@ Output: $6,199.81
 ## Example 3:
 Input: $12,456.95, 4 people, books
 Output: $13,707.63
+
+#Code Development
+The code was developed on an online JavaScript editor (https://js.do/).
+The code can be run on any javaScript Editor or on the Chrome browser under More Tools > Developer Tools > Console.
+
+The inputs are required to be entered in the code in the last line: 
+
+#Example line
+document.getElementById("calculator").innerHTML = calculator(1299.99,3,"food");
+
+The flat rates and markup are defined as Global Variables and should be changed if new rates or industries are added
+
+The calculator function is divided into 3 sections:
+1) The first section checks the input Statement to check price and number of workers are numeric, and industry exists in the Global Variable definition. The calculations for the first section are done as follows:
+  
+  markup_price = price + price*markup["flat"];  // Flat Markup Calculation
+  
+  worker_markup_price = markup_price + markup_price*workers*markup["worker"]; 
+  // Calculation with workers markup
+  
+  total_markup=worker_markup_price + worker_markup_price*markup[industry];
+  // Total markup with the industry markup included
+  
+2) The second section is for an industry where there is no markup charged for packaging. 
+The calculations are as follows:
+ markup_price = price + price*markup["flat"];  // Flat Markup Calculation
+  
+ total_markup = markup_price + markup_price*workers*markup["worker"]; 
+  // Total markup with the industry markup included
